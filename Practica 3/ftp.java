@@ -8,7 +8,7 @@ import org.apache.commons.net.ftp.FTPFile;
 public class ftp {
 	public static final String ipServer = "192.168.1.54";
 	public static final String user = "caldeiro";
-	public static final String passw = "qwert!\"·45";
+	public static final String passw = "qwert!\"Â·45";
 
 	public static void main(String[] args) throws SocketException, IOException {
 		FTPClient cliente = new FTPClient();
@@ -20,7 +20,7 @@ public class ftp {
 
 		try {
 			cliente.connect(servFTP, 21);
-			boolean login = cliente.login(usuario, clave);
+			boolean login = cliente.login(user, passw);
 			if (login)
 				System.out.println("Login correcto...");
 			else {
